@@ -98,7 +98,7 @@ Usted debe tener su máquina en AWS preparada, esto significa:
 
 3. **Comprobar funcionamiento correcto**
 
--   Ir a https://sXXgXX.www.exampledomain.cloud/heatbeat/index.html
+-   Ir a https://sXXgXX.www.exampledomain.cloud/heartbeat/index.html
 -   Comprobar que la página abre
 -   Comprobar que el api endpoint heartbeat funciona
 
