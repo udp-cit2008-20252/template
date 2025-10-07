@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.redirect(config.DOMAIN);
+    res.status(404).json({ error: 'Route not found' });
 });
 
 // == Servidor ==========================
