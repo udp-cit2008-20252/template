@@ -55,6 +55,8 @@ Este es el template base para el proyecto web de la asignatura CIT2008. Proporci
 
 ## Pre-requisitos
 
+> ⚠️ La sigla SXXGXX y sXXgXX se refiere al código del grupo, por ejemplo S05G13, de la misma forma que se ha utilizado a lo largo del semestre.
+
 Usted debe tener su máquina en AWS preparada, esto significa:
 
 -   La máquina está funcionando
@@ -65,22 +67,38 @@ Usted debe tener su máquina en AWS preparada, esto significa:
 
 ## Instalación
 
-1. **Clona el repositorio**:
+> ⚠️ Este procedimiento debe ser ejecutado en la máquina que el grupo utilizará para desplegar el proyecto, por lo tanto solo se debe ejecutar en una de las máquinas de los miembros del equipo
+
+1. **Dirección IP**
+
+-   Identifica la dirección IP de la máquina que se utilizará para el despliegue
+-   Instala la dirección IP utilizando https://exampledomain.cloud/dns asociándola al dominio **sXXgXX.www.exampledomain.cloud**
+
+2. **Clona el repositorio**:
+
+-   Identifica la url del repositorio del grupo, debería ser algo de la forma git@github.com:udp-cit2008-20252/SXXGXX-Repo.git
+-   Accede a la máquina para el despliegue con el usuario creado en el procedimiento de "Despliegue y configuración inicial"
+-   Ejecuta las siguientes lineas reemplazando de forma pertinente los espacios a completar
 
     ```bash
-    git clone <url-del-repositorio> ~/www-group
+    cd
+    git clone <url-del-repositorio> ~/SXXGXX
     ```
 
 2. **Ejecuta el script de setup**
 
+> ⚠️ Revisa que el nombre de la carpeta con el repositorio clonado sea efectivamente SXXGXX. Tanto la S como la G deben ser mayúsculas. Si esto no está en el formato esperado la instalación automatizada no funcionará
+
+-   Ejecuta el siguiente comando para desplegar el contenido del repositorio
     ```bash
-    cd ~/www-group/commons/scripts
+    cd ~/SXXGXX/commons/scripts
+    chmod +x ./setup.sh
     ./setup.sh
     ```
 
 3. **Comprobar funcionamiento correcto**
 
--   Ir a https://SXXGXX.www.exampledomain.cloud/heatbeat/index.html
+-   Ir a https://sXXgXX.www.exampledomain.cloud/heatbeat/index.html
 -   Comprobar que la página abre
 -   Comprobar que el api endpoint heartbeat funciona
 
